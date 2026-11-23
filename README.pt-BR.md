@@ -159,6 +159,29 @@ Os documentos oficiais homologados e apresentados para este projeto encontram-se
 
 ---
 
+## 🚀 Guia de Início Rápido & Configuração do Ambiente
+
+### 1. Clonar o Repositório
+```bash
+git clone https://github.com/isadantasms/edge-meningioma-segmentation.git
+cd edge-meningioma-segmentation
+```
+
+### 2. Configurar o Ambiente Virtual
+Crie um ambiente virtual com Python 3.10+ e instale os pacotes necessários:
+```bash
+python3 -m venv venv
+source venv/bin/activate
+pip install -r requirements.txt
+```
+
+### 3. Notebooks de Experimentação
+Os experimentos e etapas do pipeline encontram-se documentados no diretório [`notebooks/`](./notebooks/):
+* `01_classification_convnext_atto.ipynb`: Classificação preliminar com ConvNeXt-Atto ($224 \times 224$).
+* `02_segmentation_segformer.ipynb`: Linha de base para segmentação semântica com SegFormer ($256 \times 256$).
+
+---
+
 ## 📁 Estrutura do Repositório
 
 ```text
@@ -182,6 +205,7 @@ edge-meningioma-segmentation/
 │   └── utils/                          # Métricas (Dice, IoU, HD95) e benchmark de CPU
 │
 ├── .gitignore                          # Regras de exclusão do Git
+├── requirements.txt                    # Dependências do projeto Python
 ├── README.md                           # Documentação principal (Inglês)
 └── README.pt-BR.md                     # Documentação completa em Português
 ```
