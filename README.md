@@ -10,6 +10,7 @@
 [![PyTorch](https://img.shields.io/badge/PyTorch-Deep%20Learning-EE4C2C.svg)](https://pytorch.org/)
 [![Status](https://img.shields.io/badge/Status-In%20Progress-brightgreen.svg)]()
 [![Documentation](https://img.shields.io/badge/Official%20Documents-Attached-success.svg)](#-project-documentation-and-attachments)
+[![Notion Workspace](https://img.shields.io/badge/Notion-Research%20Workspace-000000.svg?logo=notion&logoColor=white)](https://app.notion.com/p/Segmenta-o-Sem-ntica-de-Meningiomas-via-Destila-o-de-Conhecimento-e-Intelig-ncia-Artificial-Explic-4070fdd8eda580a9812afa1ed45d73f6)
 
 **[🇺🇸 English](README.md) | [🇧🇷 Português](README.pt-BR.md)**
 
@@ -28,6 +29,7 @@ Individual scientific research project developed under the <b>Tutorial Education
 - **PET Group Tutor:** Prof. Dr. Thiago Pirola Ribeiro
 - **Academic Unit:** Faculty of Computing (FACOM), Federal University of Uberlândia (UFU), Brazil
 - **Research Duration:** 12 months (November 2026 – October 2027)
+- **Interactive Lab Notes:** [Notion Research Workspace](https://app.notion.com/p/Segmenta-o-Sem-ntica-de-Meningiomas-via-Destila-o-de-Conhecimento-e-Intelig-ncia-Artificial-Explic-4070fdd8eda580a9812afa1ed45d73f6)
 
 ---
 
@@ -125,6 +127,17 @@ Where:
 
 ---
 
+## 📓 Preliminary Experiments & Notebooks
+
+The preliminary exploratory tasks and baseline pipelines conducted during the project initiation are preserved in the [`notebooks/`](./notebooks/) directory:
+
+| Notebook | Focus | Description | Link |
+| :--- | :---: | :--- | :---: |
+| 🧪 **01 — Classification (ConvNeXt-Atto)** | Edge Classification | Preliminary baseline pipeline for multi-class brain tumor classification (*glioma, meningioma, pituitary, no tumor*) using ConvNeXt-Atto with reproducible splits. | [Open Notebook](./notebooks/01_classification_convnext_atto.ipynb) |
+| 🎯 **02 — Segmentation (SegFormer Baseline)** | Semantic Segmentation | Binary semantic segmentation pipeline validating patch extraction, training loops, and initial Dice/IoU tracking for brain tumors. | [Open Notebook](./notebooks/02_segmentation_segformer.ipynb) |
+
+---
+
 ## 📅 Project Timeline (12 Months)
 
 | Period | Milestone / Planned Activities |
@@ -134,19 +147,19 @@ Where:
 | **03/2027** | Output distillation implementation; hyperparameter tuning on the validation set; logging of preliminary experiments. |
 | **05/2027** | Investigation of intermediate feature alignment; initial integration of XAI (LIME); ablation studies and experiment repetition. |
 | **07/2027** | Final evaluation on the unseen test set; CPU runtime latency and RAM profiling; error analysis and qualitative XAI assessment. |
-| **10/2027** | Consolidação and discussion of results; preparation of reproducibility artifacts; final report writing and scientific paper submission. |
+| **10/2027** | Consolidation and discussion of results; preparation of reproducibility artifacts; final report writing and scientific paper submission. |
 
 ---
 
 ## 📂 Project Documentation and Attachments
 
-Official institutional documents, regulatory records, and academic presentations are archived in the [`docs/`](./docs/) directory:
+Official institutional documents, regulatory records, and academic presentations are archived in the [`docs/`](./docs/) directory with English-standardized file names:
 
 | Document | Description | Format / Link |
 | :--- | :--- | :---: |
-| 📄 **PET Work Plan (*Plano de Trabalho*)** | Comprehensive PET individual research work plan approved by UFU | [View PDF](./docs/plano_de_trabalho.pdf) |
-| 📝 **DIREN Research Registration** | Official UFU DIREN/PROGRAD registration record with digital Gov.br signatures | [View PDF](./docs/registro_de_pesquisa.pdf) |
-| 📊 **Academic Poster (WTDCC 2026)** | Scientific poster presented at the Workshop on Theses and Dissertations in Computer Science | [View PDF](./docs/poster_wtdcc_2026.pdf) |
+| 📄 **Research Work Plan** | Comprehensive PET individual research work plan approved by UFU | [View PDF (`docs/research_work_plan.pdf`)](./docs/research_work_plan.pdf) |
+| 📝 **DIREN Research Registration** | Official UFU DIREN/PROGRAD registration record with digital Gov.br signatures | [View PDF (`docs/research_registration.pdf`)](./docs/research_registration.pdf) |
+| 📊 **Academic Poster (WTDCC 2026)** | Scientific poster presented at the Workshop on Theses and Dissertations in Computer Science | [View PDF (`docs/scientific_poster_wtdcc_2026.pdf`)](./docs/scientific_poster_wtdcc_2026.pdf) |
 
 ---
 
@@ -156,12 +169,15 @@ Official institutional documents, regulatory records, and academic presentations
 edge-meningioma-segmentation/
 │
 ├── docs/                               # Official institutional and academic records
-│   ├── plano_de_trabalho.pdf          # Approved research plan (PET/UFU)
-│   ├── registro_de_pesquisa.pdf       # Formal DIREN/UFU registration document
-│   └── poster_wtdcc_2026.pdf          # Academic poster (WTDCC 2026)
+│   ├── research_work_plan.pdf         # Approved research plan (PET/UFU)
+│   ├── research_registration.pdf      # Formal DIREN/UFU registration document
+│   └── scientific_poster_wtdcc_2026.pdf # Academic poster (WTDCC 2026)
+│
+├── notebooks/                          # Experimental and exploratory Jupyter notebooks
+│   ├── 01_classification_convnext_atto.ipynb # Edge classification task (ConvNeXt-Atto)
+│   └── 02_segmentation_segformer.ipynb        # Semantic segmentation baseline (SegFormer)
 │
 ├── data/                               # Dataset preparation scripts and split definitions
-├── notebooks/                          # Exploratory analysis and prototyping notebooks
 ├── src/                                # Project source code
 │   ├── data/                           # Dataset loaders and augmentations
 │   ├── models/                         # Network definitions (Teacher, Student, Adapters)

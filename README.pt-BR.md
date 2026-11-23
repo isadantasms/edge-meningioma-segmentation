@@ -10,6 +10,7 @@
 [![PyTorch](https://img.shields.io/badge/PyTorch-Deep%20Learning-EE4C2C.svg)](https://pytorch.org/)
 [![Status](https://img.shields.io/badge/Status-Em%20Andamento-brightgreen.svg)]()
 [![Documentação](https://img.shields.io/badge/Documentos-Oficiais%20Anexados-success.svg)](#-documentações-e-anexos-do-projeto)
+[![Notion Workspace](https://img.shields.io/badge/Notion-Notas%20de%20Pesquisa-000000.svg?logo=notion&logoColor=white)](https://app.notion.com/p/Segmenta-o-Sem-ntica-de-Meningiomas-via-Destila-o-de-Conhecimento-e-Intelig-ncia-Artificial-Explic-4070fdd8eda580a9812afa1ed45d73f6)
 
 **[🇺🇸 English](README.md) | [🇧🇷 Português](README.pt-BR.md)**
 
@@ -28,6 +29,7 @@ Projeto de pesquisa científica individual desenvolvido no âmbito do <b>Program
 - **Tutor do Grupo PET:** Prof. Dr. Thiago Pirola Ribeiro
 - **Unidade Acadêmica:** Faculdade de Computação (FACOM / UFU)
 - **Duração do Projeto:** 12 meses (Novembro/2026 – Outubro/2027)
+- **Diário de Bordo / Notas Interativas:** [Espaço de Trabalho no Notion](https://app.notion.com/p/Segmenta-o-Sem-ntica-de-Meningiomas-via-Destila-o-de-Conhecimento-e-Intelig-ncia-Artificial-Explic-4070fdd8eda580a9812afa1ed45d73f6)
 
 ---
 
@@ -121,6 +123,17 @@ Onde:
 
 ---
 
+## 📓 Experimentos Preliminares e Notebooks
+
+As primeiras atividades exploratórias e pipelines de base desenvolvidos na fase inicial do projeto estão organizados no diretório [`notebooks/`](./notebooks/):
+
+| Notebook | Foco | Descrição | Link |
+| :--- | :---: | :--- | :---: |
+| 🧪 **01 — Classificação (ConvNeXt-Atto)** | Classificação Leve (Edge) | Pipeline inicial de classificação multiclasse (*glioma, meningioma, tumor hipofisário e sem tumor*) utilizando a arquitetura leve ConvNeXt-Atto com partições reprodutíveis. | [Acessar Notebook](./notebooks/01_classification_convnext_atto.ipynb) |
+| 🎯 **02 — Segmentação (SegFormer Baseline)** | Segmentação Semântica | Pipeline inicial de segmentação semântica binária validando extração de patches, ciclo de treinamento e métricas Dice/IoU para tumores cerebrais. | [Acessar Notebook](./notebooks/02_segmentation_segformer.ipynb) |
+
+---
+
 ## 📅 Cronograma de Atividades (12 Meses)
 
 | Período | Atividade Prevista |
@@ -136,13 +149,13 @@ Onde:
 
 ## 📂 Documentações e Anexos do Projeto
 
-Os documentos oficiais homologados e apresentados para este projeto encontram-se disponíveis no repositório na pasta [`docs/`](./docs/):
+Os documentos oficiais homologados e apresentados para este projeto encontram-se disponíveis no repositório na pasta [`docs/`](./docs/) com nomenclatura padronizada em inglês:
 
 | Documento | Descrição | Link |
 | :--- | :--- | :---: |
-| 📄 **Plano de Trabalho PET** | Plano de trabalho detalhado de Pesquisa Individual PET aprovado pela UFU | [Visualizar PDF](./docs/plano_de_trabalho.pdf) |
-| 📝 **Registro de Pesquisa DIREN** | Formulário oficial de Registro de Pesquisa Individual PET com assinaturas digitais (DIREN/PROGRAD/DIFDI) | [Visualizar PDF](./docs/registro_de_pesquisa.pdf) |
-| 📊 **Pôster Científico (WTDCC 2026)** | Pôster acadêmico apresentado no Workshop de Teses e Dissertações em Ciência da Computação | [Visualizar PDF](./docs/poster_wtdcc_2026.pdf) |
+| 📄 **Plano de Trabalho PET** | Plano de trabalho detalhado de Pesquisa Individual PET aprovado pela UFU | [Visualizar PDF (`docs/research_work_plan.pdf`)](./docs/research_work_plan.pdf) |
+| 📝 **Registro de Pesquisa DIREN** | Formulário oficial de Registro de Pesquisa Individual PET com assinaturas digitais (DIREN/PROGRAD/DIFDI) | [Visualizar PDF (`docs/research_registration.pdf`)](./docs/research_registration.pdf) |
+| 📊 **Pôster Científico (WTDCC 2026)** | Pôster acadêmico apresentado no Workshop de Teses e Dissertações em Ciência da Computação | [Visualizar PDF (`docs/scientific_poster_wtdcc_2026.pdf`)](./docs/scientific_poster_wtdcc_2026.pdf) |
 
 ---
 
@@ -151,13 +164,16 @@ Os documentos oficiais homologados e apresentados para este projeto encontram-se
 ```text
 edge-meningioma-segmentation/
 │
-├── docs/                               # Documentações oficiais e acadêmicas
-│   ├── plano_de_trabalho.pdf          # Plano de trabalho detalhado PET/UFU
-│   ├── registro_de_pesquisa.pdf       # Termo de registro de pesquisa homologado
-│   └── poster_wtdcc_2026.pdf          # Pôster acadêmico (WTDCC 2026)
+├── docs/                               # Documentações oficiais e acadêmicas (em inglês)
+│   ├── research_work_plan.pdf         # Plano de trabalho detalhado PET/UFU
+│   ├── research_registration.pdf      # Termo de registro de pesquisa homologado
+│   └── scientific_poster_wtdcc_2026.pdf # Pôster acadêmico (WTDCC 2026)
+│
+├── notebooks/                          # Notebooks de experimentação e exploração
+│   ├── 01_classification_convnext_atto.ipynb # Tarefa de classificação preliminar
+│   └── 02_segmentation_segformer.ipynb        # Linha de base de segmentação semântica
 │
 ├── data/                               # Instruções e scripts de preparação da base BRISC
-├── notebooks/                          # Notebooks de experimentação e exploração
 ├── src/                                # Código-fonte do projeto
 │   ├── data/                           # Dataloaders e transformações de pré-processamento
 │   ├── models/                         # Arquiteturas (Professora, Aluna e Adaptadores)
